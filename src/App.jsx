@@ -48,7 +48,7 @@ class App extends Component {
               cursor: 'pointer',
             }}
           >
-            ออกจากโหมด fullscreen
+            Exit
           </button>
         )}
       </div>
