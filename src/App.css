@@ -1,0 +1,19 @@
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  zIndex: 100;
+}
+
+.App button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  zIndex: 101;
+  background: rgba(255, 0, 0, 0.3);
+  borderRadius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+}
