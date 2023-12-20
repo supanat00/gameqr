@@ -18,9 +18,15 @@ class App extends Component {
     // ออกจากโหมด fullscreen เมื่อคลิกปุ่ม
     document.exitFullscreen();
   
-    // ปิดเว็บแอพ
-    window.close();
+    // ปิดเว็บแอพบนมือถือ
+    const { userAgent } = window.navigator;
+    if (userAgent.match(/(iPhone|iPod|iPad|Android)/i)) {
+      window.location.href = "about:blank";
+    } else {
+      window.close();
+    }
   };
+  
   
 
   render() {
