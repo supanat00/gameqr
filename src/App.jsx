@@ -1,6 +1,6 @@
 import React from "react";
 import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
-import './app.css'
+import './App.css'
 
 export default function App() {
   const [selected, setSelected] = React.useState("login");
