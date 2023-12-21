@@ -1,37 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-size: 10px; /* For easy rem conversions */
+	/* VARIABLES */
+	--font-sans-serif: "Poppins", sans-serif;
+	--font-display: "Cherry Bomb One", sans-serif;
+	--neutral-dk: #222;
+	--neutral-lt: #fff;
+	--accent: #3891a6;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* HEADER */
+.tabs-header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.title {
+	font-size: 4rem;
+	font-family: var(--font-display);
+	font-weight: 400;
+}
+/* Dots under the h2 heading */
+.heading-accent {
+	font-size: 3rem;
+	color: var(--accent);
 }
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
