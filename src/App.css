@@ -76,6 +76,25 @@
   color: #ffffffda;
 }
 
+.how-btn {
+  position: absolute; /* กำหนดตำแหน่งสัมบูรณ์ให้ปุ่ม */
+  top: 10px; /* ระยะห่างจากด้านบน */
+  right: 10px; /* ระยะห่างจากด้านขวา */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffffff; /* สีพื้นหลัง */
+  color: #000000; /* สีตัวอักษร */
+  border: 1px solid #000000; /* เส้นขอบ */
+  border-radius: 5px; /* มุมโค้งมน */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อวางเมาส์ */
+}
+
+.how-btn:hover {
+  background-color: #000000; /* เปลี่ยนสีพื้นหลังเมื่อวางเมาส์ */
+  color: #ffffff; /* เปลี่ยนสีตัวอักษรเมื่อวางเมาส์ */
+}
+
 .flip-card-front,
 .flip-card-back {
   width: 100%;
@@ -189,6 +208,20 @@
   .inner p {
     color: #ffffff;
     font-size: 12px;
+  }
+
+  .how-btn {
+
+    top: 10px; /* ระยะห่างจากด้านบน */
+    right: 10px; /* ระยะห่างจากด้านขวา */
+
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #ffffff; /* สีพื้นหลัง */
+    color: #000000; /* สีตัวอักษร */
+    border: 1px solid #000000; /* เส้นขอบ */
+    border-radius: 5px; /* มุมโค้งมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อวางเมาส์ */
   }
 }
 
