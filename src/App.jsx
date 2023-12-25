@@ -1,389 +1,291 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
-import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 import './App.css'
+import BG_Image from './assets/bg-game.jpg';
 
 export default function App() {
-  const [selected, setSelected] = React.useState("login");
 
   return (
-
-      <Card className="max-w-full w-[340px] h-[400px]">
-        <CardBody className="overflow-hidden">
-          <Tabs
-            fullWidth
-            size="md"
-            aria-label="Tabs form"
-            selectedKey={selected}
-            onSelectionChange={setSelected}
-          >
-            {/* Single Tab */}          
-            <Tab key="single" title="Single">
-              {/* Card One */}
-              <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/aJauAJV.png" className="icon" />
-                  <h3>iron man</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+    <section className="hero" style={{ backgroundImage: `url(${BG_Image})` }}>
+      <header className="tabs-header">
+        <h2 className="title">TERMINAL</h2>
+      </header>
+      <div className="tab-contents">
+        {/* Card 1 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>         
             </div>
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        <div className="flip-card-back">
+          <div className="inner">
+            <img src="https://i.imgur.com/aJauAJV.png" className="icon" />
+            <h3>iron man</h3>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+          </div>
+        </div>
+        </div>
+        {/* Card 2 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        {/* Card 3 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>         
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        <div className="flip-card-back">
+          <div className="inner">
+            <img src="https://i.imgur.com/aJauAJV.png" className="icon" />
+            <h3>iron man</h3>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+          </div>
+        </div>
+        </div>
+        {/* Card 4 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        {/* Card 5 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        {/* Card 6 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        {/* Card 7 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-
-            {/* Card Two */}
-            <div className="flip-card">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-            
-            </Tab>
-
-            {/* Team Tab */}
-            <Tab key="team" title="Team">
-            {/* Team One */}
-            <div className="flip-card-team">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/aJauAJV.png" className="icon" />
-                  <h3>iron man</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+        </div>
+        {/* Card 8 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
             </div>
-            {/* Team Two */}
-            <div className="flip-card-team">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
-                  <h3>thor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
             </div>
-            {/* Team Three */}
-            <div className="flip-card-team">
-              <div className="flip-card-front">
-                <div className="inner">
-                  <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
-                  <h3>avengers</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                    corrupti itaque dolore!
-                  </p>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="inner">
-                  <img src=" https://i.imgur.com/wROMxVv.png" className="icon" />
-                  <h3>spider-man</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                    voluptatum eius quam debitis, sit amet sunt neque ipsum?
-                  </p>
-                </div>
-              </div>
-            </div>              
+          </div>
+        </div>
+        {/* Card 9 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 10 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 11 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 12 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 13 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 14 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+        {/* Card 15 */}
+        <div className="flip-card">
+          <div className="flip-card-front">
+            <div className="inner">
+              <img src="https://i.imgur.com/C9DWUDi.png" className="icon" />
+              <h3>avengers</h3>
+            </div>
+          </div>
+          <div className="flip-card-back">
+            <div className="inner">
+              <img src="https://i.imgur.com/ep0HjjD.png" className="icon" />
+              <h3>thor</h3>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+                <button className='play-btn'> Play </button>
+              </a>    
+            </div>
+          </div>
+        </div>
+      </div>
 
-            </Tab>
-
-          </Tabs>
-        </CardBody>
-      </Card>
-
+      
+      
+      
+    </section>
   );
 }

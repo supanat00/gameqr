@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+
+@font-face {
+  font-family: "PokePoke";
+  src: url("./fonts/DebugFreeTrial-MVdYB.otf");
+}
 
 * {
   margin: 0;
@@ -9,9 +11,96 @@
   box-sizing: border-box;
 }
 
+/* Background */
+.hero {
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  align-items: center; /* จัดกึ่งกลางในแนวนอน */
+  flex-direction: column;  /* เรียงเนื้อหาในแนวตั้ง */
+}
 
+/* HEADER */
+.tabs-header {
+	text-align: center;
+	margin-bottom: 0px;
+  margin-top: 20px;
+}
+.title {
+	font-size: 3rem;
+	font-family: "PokePoke";
+	font-weight: 400;
+}
 
-/* Animate */
+/* Contents */
+.tab-contents {
+  margin: 1rem;
+  background-color: #fff;
+  opacity: 0.8;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 1.5rem);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  overflow-y: auto; /* เพิ่ม scrollbar แนวตั้ง */
+  z-index: 1;
+  
+}
+
+/* Flipcard */
+.flip-card {
+  /* outline: 5px solid hotpink; */
+  margin: 15px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  width: 90%;
+  max-height: 300px;
+  z-index: 50;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.play-btn {
+  background-color: transparent; /* ปุ่มโปร่งใส */
+  border: 1px solid white; /* เส้นสีขาว */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px; /* เว้นระยะห่างจากข้างบน */
+  color: #ffffffda;
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  background-color: #000000;
+  background-image:        url(https://wallpapercave.com/wp/wp3842313.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-card:nth-of-type(2) .flip-card-front,
+.flip-card:nth-of-type(2) .flip-card-back {
+  background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
+}
+
+.flip-card:nth-of-type(3) .flip-card-front,
+.flip-card:nth-of-type(3) .flip-card-back {
+  background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
+}
+
 .flip-card-front {
   transform: rotateY(0deg);
 }
@@ -45,6 +134,26 @@
   z-index: 2;
 }
 
+.inner .icon {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.inner h3 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+.inner p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 28px;
+}
+
 .flip-card:hover .flip-card-front {
   transform: rotateY(-180deg);
 }
@@ -53,260 +162,53 @@
   transform: rotateY(0deg);
 }
 
-.flip-card-team:hover .flip-card-front {
-  transform: rotateY(-180deg);
-}
-
-.flip-card-team:hover .flip-card-back {
-  transform: rotateY(0deg);
-}
-
-/* Responsive Code */
-/* Responsive code for mobile */
-@media (max-width: 767px) {
+/* สไตล์สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 575px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    min-height: 300px;
+  }
   .inner .icon {
-    width: 30px;
+    width: 40px;
     margin-bottom: 10px;
   }
   
   .inner h3 {
     margin-bottom: 8px;
     color: #ffffff;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 40px;
+    font-size: 25px;
+
+    line-height: 30px;
     text-transform: capitalize;
   }
   
   .inner p {
     color: #ffffff;
-    font-size: 10px;
-    line-height: 28px;
+    font-size: 12px;
   }
-  /* Single Tab */
-  .flip-card {
-    margin: 20px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  .flip-card .flip-card-front,
-  .flip-card .flip-card-back {
-    width: 220px;
-    min-height: 250px;
-    height: auto;
-    background-color: #000000;
-    background-image:        url(https://wallpapercave.com/wp/wp3842313.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  }
-  
-  .flip-card:nth-of-type(2) .flip-card-front,
-  .flip-card:nth-of-type(2) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
-  }
-  
-  .flip-card:nth-of-type(3) .flip-card-front,
-  .flip-card:nth-of-type(3) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(4) .flip-card-front,
-  .flip-card:nth-of-type(4) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(5) .flip-card-front,
-  .flip-card:nth-of-type(5) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(6) .flip-card-front,
-  .flip-card:nth-of-type(6) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(7) .flip-card-front,
-  .flip-card:nth-of-type(7) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(8) .flip-card-front,
-  .flip-card:nth-of-type(8) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(9) .flip-card-front,
-  .flip-card:nth-of-type(9) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(10) .flip-card-front,
-  .flip-card:nth-of-type(10) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(11) .flip-card-front,
-  .flip-card:nth-of-type(11) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(12) .flip-card-front,
-  .flip-card:nth-of-type(12) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  
-  /* Team Tab */
-  .flip-card-team {
-    margin: 20px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  .flip-card-team .flip-card-front,
-  .flip-card-team .flip-card-back {
-    width: 300px;
-    min-height: 420px;
-    height: auto;
-    background-color: #000000;
-    background-image:        url(https://wallpapercave.com/wp/wp3842313.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  }
-  
-  .flip-card-team:nth-of-type(2) .flip-card-front,
-  .flip-card-team:nth-of-type(2) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
-  }
-  
-  .flip-card-team:nth-of-type(3) .flip-card-front,
-  .flip-card-team:nth-of-type(3) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  }
+}
 
-  /* Responsive code for mobile */
-@media (min-width : 767px) {
-  /* Single Tab */
-  .flip-card {
-    margin: 20px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+/* สไตล์สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .title {
+    font-size: 5rem;
   }
-  
-  .flip-card .flip-card-front,
-  .flip-card .flip-card-back {
-    width: 280px;
-    min-height: 420px;
-    height: auto;
-    background-color: #000000;
-    background-image:        url(https://wallpapercave.com/wp/wp3842313.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* สไตล์สำหรับหน้าจอขนาดใหญ่ (PC) */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .title {
+    font-size: 5rem;
   }
-  
-  .flip-card:nth-of-type(2) .flip-card-front,
-  .flip-card:nth-of-type(2) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
+}
+
+/* สไตล์สำหรับหน้าจอขนาดใหญ่ (PC) */
+@media (min-width: 1200px) {
+  .title {
+    font-size: 5rem;
   }
-  
-  .flip-card:nth-of-type(3) .flip-card-front,
-  .flip-card:nth-of-type(3) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(4) .flip-card-front,
-  .flip-card:nth-of-type(4) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(5) .flip-card-front,
-  .flip-card:nth-of-type(5) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(6) .flip-card-front,
-  .flip-card:nth-of-type(6) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(7) .flip-card-front,
-  .flip-card:nth-of-type(7) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(8) .flip-card-front,
-  .flip-card:nth-of-type(8) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(9) .flip-card-front,
-  .flip-card:nth-of-type(9) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(10) .flip-card-front,
-  .flip-card:nth-of-type(10) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(11) .flip-card-front,
-  .flip-card:nth-of-type(11) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  .flip-card:nth-of-type(12) .flip-card-front,
-  .flip-card:nth-of-type(12) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  
-  
-  /* Team Tab */
-  .flip-card-team {
-    margin: 20px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  .flip-card-team .flip-card-front,
-  .flip-card-team .flip-card-back {
-    width: 280px;
-    min-height: 420px;
-    height: auto;
-    background-color: #000000;
-    background-image:        url(https://wallpapercave.com/wp/wp3842313.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  }
-  
-  .flip-card-team:nth-of-type(2) .flip-card-front,
-  .flip-card-team:nth-of-type(2) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp5049551.jpg);
-  }
-  
-  .flip-card-team:nth-of-type(3) .flip-card-front,
-  .flip-card-team:nth-of-type(3) .flip-card-back {
-    background-image: url(https://wallpapercave.com/wp/wp7907920.jpg);
-  }
-  }
+}
