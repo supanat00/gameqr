@@ -11,7 +11,7 @@ export default function App() {
         <h2 className="title">TERMINAL</h2>
       </header>
       <div className="tab-contents">
-        <button className='how-btn'>กฎกติกา</button>
+        <button className='how-btn'>วิธีเล่นเกม</button>
         {/* Card 1 */}
         <div className="flip-card">
           <div className="flip-card-front">
